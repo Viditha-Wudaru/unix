@@ -1,0 +1,25 @@
+                       UNIX ASSIGNMENTS:
+                                        EX-1
+1) ls /
+2) cat /etc/passwd
+3) cat f4;ls
+   rm -i f9 :: prompts confirmation
+   file:shows the file type :: ASCII text or directory or symbolic link
+                                        EX-2
+2) cd ~ :: to go to home directory
+   cd /home/viditha/d2/gh :: absolute path
+   cd . :: current
+   cd .. :: goes to previous directory
+                                        EX-3
+   mkdir documents
+   cd documents
+   mkdir "personal directory"
+   cd "personal directory"
+   vi kanbay_training  
+
+   sed -i 's/aim/goal/' kanbay_training
+   vi kanbay_training
+   esc; :%s/on Unix training/at kanbay/;  enter
+
+                                        EX-4
+     
