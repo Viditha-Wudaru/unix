@@ -1,0 +1,482 @@
+sql: work with dates like display employees experience in company
+			check who joined after 20thnovember 2015 etc
+			
+			Display the employee name, job, and start date of employees hired between
+			February 20, 80, and May 1, 82. Order the query in ascending order by start
+			date.
+eg: SELECT first_name, last_name, hire_date 
+	FROM employees 
+	WHERE YEAR(hire_date)  LIKE '1987%';
+
+#####################http://www.techbeamers.com/sql-query-questions-answers-for-practice/
+
+SQL PRACTICE:
+--Oracle 11g Express Edition
+
+-- Put your Oracle SQL statement here and execute it
+
+
+--select banner as "oracle version" from v$version;
+
+  desc employees;
+--select * from employees where department_id=30;
+
+--select employee_id,salary,department_id from employees
+
+--  where salary=(select max(salary) from employees where department_id=30);
+
+--desc departments;
+--select employee_id,first_name,e.department_id,d.department_name
+
+--    from employees e join departments d on e.department_id=d.department_id;
+
+select * from employees;
+
+
+--select distinct job_id,location_id from employees e join departments d
+
+--   on e.department_id=d.department_id where d.department_id=100;
+  
+
+--select * from departments;
+  
+  
+--select d.department_id, department_name, location_id, job_id from departments d join employees e 
+  on d.department_id = e.department_id where location_id = 1700;
+  
+ 
+-- select e1.last_name,e1.employee_id,e2.employee_id manager_id,
+ 
+--   e2.last_name manager_name from employees e1 join employees e2 
+   
+--     on e1.manager_id = e2. employee_id
+      ;
+ 
+
+--create table zone_mst(zon_code int,zon_desc int,zon_status char(1),
+  
+--zon_start date,zone_end date,zon_region int);
+   
+   
+insert into zone_mst values(12,20,'Y',to_date('12-03-2018','dd/mm/yyyy'),to_date('12-03-2019','dd/mm/yyyy' ),22);
+   
+
+insert into zone_mst values(13,21,'Y',to_date('13-03-2018','dd/mm/yyyy'),to_date('12-03-2019','dd/mm/yyyy' ),22);
+
+insert into zone_mst values(14,22,'Y',to_date('14-03-2018','dd/mm/yyyy'),to_date('12-03-2019','dd/mm/yyyy' ),22);
+   
+   
+   
+
+					EX-3
+1)copy paste a line in vi editor:
+    vi kanbay_training
+    goto that line and press v(visual) and then select using arrows 
+    press y to copy
+    then go to particular place and press p
+
+
+**********Try:Use screen scrolling commands to move forward and backward one screen at a time
+              Go to line number 56
+              Join two lines
+
+					EX-4
+
+1)  [viditha@server-1 personal directory]$date +%A                                                
+	Tuesday                                                                                       
+2)  [viditha@server-1 personal directory]$date +%B                                                
+	March                                                                                         
+3)  [viditha@server-1 personal directory]$date +%C                                                
+	20                                                                                            
+4)  [viditha@server-1 personal directory]$date +%D                                                
+	03/20/18 
+5)  [viditha@server-1 ~]$date '+%b_%d_%y'                                                         
+	Mar_20_18    
+6)  [viditha@server-1 ~]$date '+%b_%d_%Y'                                                         
+	Mar_20_2018  
+
+****************Try:
+                banner Kanbay
+		uname –X
+		Use at utility to send a message 5 min from now
+		List your cron jobs
+		Create a cron job
+[viditha@server-1 ~]$id                                                                       
+	uid=100106(viditha) gid=100163(viditha) groups=100163(viditha) context=guest_u:guest_r:guest_t
+	:s0                                                                                           
+[viditha@server-1 ~]$id -a                                                                    
+	uid=100106(viditha) gid=100163(viditha) groups=100163(viditha) context=guest_u:guest_r:guest_t
+	:s0      
+
+[viditha@server-1 ~]$uname                                                                    
+	Linux
+
+[viditha@server-1 ~]$uname -a                                                                 
+	Linux server-1.localdomain 3.10.0-514.16.1.el7.x86_64 #1 SMP Wed Apr 12 15:04:24 UTC 2017 x86_
+	64 x86_64 x86_64 GNU/Linux                                         
+
+[viditha@server-1 ~]$script script_file                                                       
+	Script started, file is script_file                                                           
+[viditha@server-1 ~]$exit                                                                     
+	Script done, file is script_file                                                              
+[viditha@server-1 ~]$clear  
+
+[viditha@server-1 ~]$cat script_file                                                          
+Output:	 Script started on Tue 20 Mar 2018 10:49:00 AM CET                                             
+	 [viditha@server-1 ~]$exit                                                                     
+                                                                                              
+	 Script done on Tue 20 Mar 2018 10:49:14 AM CET                                                
+[viditha@server-1 ~]$file script_file                                                         
+	script_file: ASCII text, with CRLF, LF line terminators, with escape sequences     
+
+Display all logged in users : who
+
+
+					EX-5
+
+1) [viditha@server-1 ~]$grep viditha /etc/passwd                                                 
+	viditha:x:100106:100163::/home/viditha:
+2) [viditha@server-1 ~]$grep -n viditha /etc/passwd                                              
+	90136:viditha:x:100106:100163::/home/viditha:
+3) Count the number of files in the current directory:
+	[viditha@server-1 ~]$ls                                                                       
+	d1  d3         errfile  f4  f8    s10    s6.sh  s8.sh
+	d2  documents  f1       f7  geek  s5.sh  s7.sh  script_file
+	[viditha@server-1 ~]$ls | wc -l                                                               
+	16         
+4) users | wc -w 
+
+5) [viditha@server-1 ~]$cp /home/viditha/documents/k1 /home/viditha/documents/k2 .  
+6) Convert contents of file names into uppercase:
+       awk '{print toupper($0)}' f7  
+#############http://www.theunixschool.com/2012/03/different-ways-to-capitalize-contents.html
+
+
+*************TRy remaning pblms
+
+					EX-6
+
+Default permissions:
+drwxrwxr-x. 2 viditha viditha   6 Mar 21 09:55 perms_dir
+-rw-rw-r--. 1 viditha viditha   0 Mar 21 09:55 perms_file
+
+Remove read rights for owner to file perms_file Can you write to the file now ?
+chmod 264 perms_file;no
+
+Restore read rights to the file perms_file Can you write to it now ?
+chmod 664 perms_file                                                    
+$vi perms_file; yes
+
+Remove execute rights for owner to dir perms_dir Can you cd to the directory ?
+chmod u-x perms_dir      
+cd perms_dir     ;no                                                      
+	-sh: cd: perms_dir: Permission denied 
+
+Restore execute rights for owner to dir perms_dir Can you cd to the directory ?
+chmod u+x perms_dir
+cd perms_dir    ; yes
+
+
+*************try unmask
+
+					Ex-7
+
+**************try this
+
+
+
+					Ex-8
+
+ls –la xap* 2>error_file # Do you see the same error ? Where did it go ?
+	same error. It goes to error_file
+
+
+[viditha@server-1 ~]$whoami | wc -l                                                           
+1                                                                                             
+[viditha@server-1 ~]$ls -la | wc -l                                                           
+30                                                                                            
+[viditha@server-1 ~]$ls -a | wc -w                                                            
+29                           
+		Bcz in ls -la in first row total is displayed
+************try this again 
+[viditha@server-1 ~]$whoami | wc -l | tee who_out  	(use who in place of whoami)                                           
+1  
+*************try who,whoami,who am i,w
+
+
+
+
+					Ex-9
+
+*********try this
+
+					EX-10
+
+********try :   Execute the script using two methods
+		Create an alias for the following
+			cls clear
+			ll ls –la
+		[viditha@server-1 ~]$cd ~sumanth                                                              
+ 			-sh: cd: /home/sumanth: Permission denied                                                     
+		[viditha@server-1 ~]$cd  
+
+[viditha@server-1 ~]$var1=10                                                                  
+[viditha@server-1 ~]$bash                                                                     
+[viditha@server-1 ~]$echo $var1                                                               
+                                                                                              
+[viditha@server-1 ~]$exit                                                                     
+[viditha@server-1 ~]$var=10                                                                   
+[viditha@server-1 ~]$export var                                                               
+[viditha@server-1 ~]$bash                                                                     
+[viditha@server-1 ~]$ech $var1                                                                
+bash: ech: command not found                                                                  
+[viditha@server-1 ~]$echo $var1                                                               
+                                                                                              
+[viditha@server-1 ~]$echo $var                                                                
+10                                                                                            
+[viditha@server-1 ~]$var2=20                                                                  
+[viditha@server-1 ~]$export var2                                                              
+[viditha@server-1 ~]$exit                                                                     
+[viditha@server-1 ~]$echo $var                                                                
+10                                                                                            
+[viditha@server-1 ~]$echo $var2                                                               
+                                                                                              
+[viditha@server-1 ~]$         
+
+
+vi sh1.sh
+	echo "enter ur name"                                                                          
+	read name                                                                                     
+	echo "hello $name"  
+sh sh1.sh                                                                
+	enter ur name                                                                                 
+	viditha                                                                                       
+	hello viditha                 
+
+
+
+************************************************SHELL SCRIPTING******************************************************
+					EX-11
+
+
+1)           
+ls -la *
+echo $?                                                                  
+0                
+ls -la xap*
+	ls: cannot access xap*: No such file or directory                            
+echo $?                                                                  
+2    
+
+
+2)
+vi sh2.sh 
+	echo "enter ur input"                                                                         
+	read input                                                                                    
+	if [ $input = "exit" ]                                                                        
+	then                                                                                          
+        	echo "success"                                                                        
+	else                                                                                          
+        	echo "failure"                                                                        
+	fi    
+sh sh2.sh                                                                
+	enter ur input                                                                                
+	exit                                                                                          
+	success  
+
+
+3)
+	cat sh3.sh
+echo "enter source file to copy"                                                              
+read sf                                                                                       
+echo "enter the destination file name"                                                        
+read df                                                                                       
+cp $sf  $df                                                                                   
+echo "file copied sucessfully            
+
+	sh sh3.sh                                                                
+enter source file to copy                                                                     
+f7                                                                                            
+enter the destination file name                                                               
+f10                            
+
+
+4)
+	cat sh4.sh
+echo "enter ur choice 1.signin 2.login 3.details 4.updation"
+while :
+do
+read input
+case $input in
+        1)echo "welcome to signin"
+          break
+             ;;
+        2)echo "login"
+          break
+             ;;
+        3)echo "welcome"
+          break
+             ;;
+        4)echo "update"
+          break
+             ;;
+        *)
+          echo "enter valid input"
+             ;;
+esac
+done
+echo "thank u"          
+
+************************************************************************************************
+					EX-12
+************************************************************************************************
+
+1)	sh5.sh
+for number in {1..5..1}                                                                       
+do                                                                                            
+echo "$number"                                                                                
+done     
+
+****************************************************************try 2 and 3
+3)	$find . -name kanbay_training                                             
+./documents/personal directory/kanbay_training
+************************https://alvinalexander.com/unix/edu/examples/find.shtml
+		        https://kb.iu.edu/d/admm
+
+4)	cat sh6.sh                                                               
+echo "enter two numbers to add"                                                               
+read a                                                                                        
+read b                                                                                        
+c=`expr $a + $b`                                                                              
+echo "sum is $c"      
+
+5)	cat sh7.sh                                                               
+sum=0                                                                                         
+for number in {1..10}                                                                         
+do                                                                                            
+sum=`expr $sum + $number`                                                                     
+done                                                                                          
+echo $sum                  
+
+
+6)	cat -n filename
+****************https://bash.cyberciti.biz/guide/While_loop
+	        https://likegeeks.com/sed-linux/
+		
+	Reading A Text File::
+	cat sh8.sh                                                               
+file=/home/viditha/f7                                                                         
+while IFS= read -r line                                                                       
+do                                                                                            
+        echo $line                                                                            
+done < "$file"           
+
+	Reading A Text File With Separate Fields::
+#!/bin/bash
+file=/etc/resolv.conf
+# set field separator to a single white space 
+while IFS=' ' read -r f1 f2
+do
+	echo "field # 1 : $f1 ==> field #2 : $f2"
+done < "$file"
+
+
+Examples::
+
+1)
+#!/bin/bash
+n=1
+while (( $n <= 5 ))
+do
+	echo "Welcome $n times."
+	n=$(( n+1 ))	
+done
+
+
+**************************************************************************************
+					EX-13
+**************************************************************************************
+
+cat sh10.sh                                                              
+echo $$                                                                                       
+echo $?                                                                                       
+echo $!                                                                                       
+echo $#                                                                                       
+echo $*                  
+
+sh sh10.sh hello hai                                                     
+Output:
+1196                                                                                          
+0                                                                                             
+                                                                                              
+2                                                                                             
+hello hai    
+
+              
+$cat sh11.sh                                                              
+echo $# $*                                                                                    
+shift                                                                                         
+echo $# $*                                                                                    
+shift                                                                                         
+echo $# $*                                                                                    
+shift   
+
+sh sh11.sh 1 2 3 4 5 6 7 8 9                                             
+Output:
+9 1 2 3 4 5 6 7 8 9                                                                           
+8 2 3 4 5 6 7 8 9                                                                             
+7 3 4 5 6 7 8 9                             
+
+
+Q:Script to print first five arguments, entered on the command line, in reverse order
+  The script should display the name of the script file on the last line.
+
+cat sh12.sh                                                              
+echo $5                                                                                       
+echo $4                                                                                       
+echo $3                                                                                       
+echo $2                                                                                       
+echo $1                                                                                       
+echo $0                      
+
+sh sh12.sh hello hai where are you ?                                     
+Output:
+you                                                                                           
+are                                                                                           
+where                                                                                         
+hai                                                                                           
+hello                                                                                         
+sh12.sh                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
